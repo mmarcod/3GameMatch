@@ -22,6 +22,8 @@ public class SC_PuzzleGenerator : MonoBehaviour
     int selectedRow = -1;
     int score;
 
+    
+
     void Start()
     {
         for (int x = 0; x < totalColumns; x++)
@@ -35,8 +37,9 @@ public class SC_PuzzleGenerator : MonoBehaviour
             }
             columns.Add(column);
         }
+        
+        StartCoroutine("RestockEnumrator()");
 
-        //StartCoroutine(RestockEnumrator());
     }
     private void OnGUI()
     {
