@@ -36,10 +36,8 @@ public class SC_PuzzleGenerator : MonoBehaviour
                 column.Add(new PuzzleElement());
             }
             columns.Add(column);
-        }
-        
-        StartCoroutine("RestockEnumrator()");
-
+        }        
+        StartCoroutine(RestockEnumerator());
     }
     private void OnGUI()
     {
@@ -135,7 +133,6 @@ public class SC_PuzzleGenerator : MonoBehaviour
                     }
                 }
             }
-
             StartCoroutine(RestockEnumrator());
         }
 
